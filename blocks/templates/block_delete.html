@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>удаление блока №{{bloc.id}}</h1>
+<p>Вы действительно хотите удалить блок стоимостью {{bloc.price}}</p>
+<form method="POST">
+  {% csrf_token %}
+
+
+<button class="btn btn-danger" type="submit">Удалить</button>
+</form>
+<a class="btn btn-warning" href="{% url 'block_detail' bloc.id %}">Назад</a>
+{% endblock content %}
+

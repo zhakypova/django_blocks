@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Информация о квартире №{{apartment.id}}</h1>
+<div>
+    <p>ФИО владельца: {{apartment.name}}</p>
+    <p>Дата продажи: {{apartment.date_of_sale}}</p>
+    <p>Статус : {{apartment.status}}</p>
+    <p>общая площадь (кв.м): {{apartment.total_area}}</p>
+
+
+</div>
+{% endblock content %}
+

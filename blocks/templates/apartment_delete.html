@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>удаление квартиры №{{apartment.id}}</h1>
+<p>Вы действительно хотите удалить квартиру с владельцем {{apartment.name}}</p>
+<form method="POST">
+  {% csrf_token %}
+
+
+<button class="btn btn-danger" type="submit">Удалить</button>
+</form>
+<a class="btn btn-warning" href="{% url 'apartment_detail' apartment.id %}">Назад</a>
+{% endblock content %}
+

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Информация о блоке №{{ bloc.id }}</h1>
+<div>
+    <p>Стоимость за квадратный метр квартиры: {{bloc.price}}</p>
+    <p>Количество подъездов: {{bloc.porch}}</p>
+    <p>Количество этажей: {{bloc.floors}}</p>
+    <p>Количество квартир на этаж: {{bloc.apartments_on_floor}}</p>
+
+
+</div>
+{% endblock content %}
+

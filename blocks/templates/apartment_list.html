@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>список квартир</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ФИО владельца</th>
+      <th scope="col">Дата продажи</th>
+      <th scope="col">Статус</th>
+      <th scope="col">общая площадь (кв.м)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for apartment in apartments %}
+    <tr>
+      <th scope="row">{{ apartment.id }}</th>
+      <td>{{ apartment.name }}</td>
+      <td>{{ apartment.date_of_sale }}</td>
+      <td>{{ apartment.status }}  </td>
+      <td>{{ apartment.total_area }}  </td>
+  </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
